@@ -1,0 +1,63 @@
+{
+    "name": "polynar/billingo",
+    "description": "This is a simple Laravel wrapper for Billingo (billingo.hu) API V3 SwaggerHUB PHP SDK.",
+    "keywords": [
+        "laravel",
+        "billingo",
+        "API",
+        "wrapper",
+        "V3"
+    ],
+    "homepage": "https://github.com/polynar/laravel-billingo",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Molnar",
+            "email": "david@codespot.hu"
+        }
+    ],
+    "repositories": [
+        {
+            "url": "https://github.com/polynar/billingo-v3-php-sdk.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^6|^8|^9",
+        "polynar/billingo-v3-php-sdk": "1.0.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Polynar\\Billingo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Polynar\\Billingo\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Polynar\\Billingo\\BillingoServiceProvider"
+            ],
+            "aliases": {
+                "Billingo": "Polynar\\Billingo\\BillingoFacade"
+            }
+        }
+    }
+
+}
