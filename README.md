@@ -30,7 +30,7 @@ Publish config file:
 Import wrapper with facade:
 
 ```php
-use Billingo as BillingoApi;
+use Billingo;
 ```
 
 ### PHP
