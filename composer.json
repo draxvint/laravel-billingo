@@ -1,5 +1,5 @@
 {
-    "name": "polynar/billingo",
+    "name": "polynar/laravel-billingo",
     "description": "This is a simple Laravel wrapper for Billingo (billingo.hu) API V3 SwaggerHUB PHP SDK.",
     "keywords": [
         "laravel",
