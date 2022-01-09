@@ -23,7 +23,7 @@ composer require polynar/laravel-billingo
 
 Publish config file:
 
-`php artisan vendor:publish --provider=Polynar\Billingo\BillingoServiceProvider`
+`php artisan vendor:publish --provider=Polynar\Billingo\BillingoServiceProvider --tag="config"`
 
 **First set up your Billingo API V3 key in ./config/billingo.php config file.**
 
