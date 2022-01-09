@@ -61,8 +61,8 @@ class Billingo
     /**
      * Call create$apiName method
      *
-     * @throws Exception (methodExists)
      * @return self
+     * @throws Exception (methodExists)
      */
     public function create(): self
     {
@@ -227,7 +227,7 @@ class Billingo
     /**
      * Store called api instance
      *
-     * @var Swagger\Client\Api\$Object
+     * @var Swagger\Client\Api\ $Object
      */
     protected $api;
 
@@ -307,8 +307,8 @@ class Billingo
      *
      * @param string $className
      *
-     * @throws Exception
      * @return void
+     * @throws Exception
      */
     protected function classExists(string $className): void
     {
@@ -322,25 +322,22 @@ class Billingo
      *
      * @param string $methodName
      * @param array $params
+     * @param bool $methodSuffix
      * @param boolean $customResponse
      *
      * @return void
      */
     protected function createResponse(string $methodName, array $params, bool $methodSuffix = false, bool $customResponse = false)
     {
-        try {
-            $this->response =
-                \call_user_func_array(
-                    array(
-                        $this->api,
-                        $this->setMethodName($methodName, $methodSuffix)
-                    ),
-                    $params
-                );
-        } catch (\Throwable $th) {
-            echo ($this->error($th->getMessage())->response());
-            exit;
-        }
+
+        $this->response =
+            \call_user_func_array(
+                array(
+                    $this->api,
+                    $this->setMethodName($methodName, $methodSuffix)
+                ),
+                $params
+            );
 
         $this->setResponse();
     }
@@ -350,8 +347,8 @@ class Billingo
      *
      * @param array $data
      *
-     * @throws Exception
      * @return void
+     * @throws Exception
      */
     protected function isData(array $data = null): void
     {
@@ -365,8 +362,8 @@ class Billingo
      *
      * @param string $methodName
      *
-     * @throws Exception
      * @return void
+     * @throws Exception
      */
     protected function methodExists(string $methodName): void
     {
@@ -435,8 +432,8 @@ class Billingo
      *
      * @param string $name
      *
-     * @throws Exception (classExists)
      * @return self
+     * @throws Exception (classExists)
      */
     public function api(string $name): self
     {
