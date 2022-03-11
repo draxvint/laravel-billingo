@@ -418,6 +418,9 @@ class Billingo
     {
         return \array_map(function ($item) {
             if (\is_object($item)) {
+                if($item instanceof \DateTime){
+                    return $item->format('Y-m-d');
+                }
                 return Arr::collapse((array)$item);
             }
             if (\is_array($item)) {
